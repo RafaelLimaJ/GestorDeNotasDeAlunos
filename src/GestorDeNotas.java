@@ -18,6 +18,12 @@ public class GestorDeNotas {
         for (int i = 0; i < NumeroDeNotas; i++) {
             System.out.println("Digite a nota do Aluno");
             NotasDigitadas[i] = scanner.nextInt();
+
+            while (NotasDigitadas[i] < 0 || NotasDigitadas[i] > 10) {
+                System.out.println("Nota inválida! A nota deve ser entre 0 e 10.");
+                System.out.println("Digite a nota do Aluno novamente:");
+                NotasDigitadas[i] = scanner.nextInt();
+            }
         }
 
         int nota = 0;
